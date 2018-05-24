@@ -28,7 +28,9 @@ centroids = zeros(K, n);
 
 
 
-
+for i=1:K
+  centroids(i,:) = ( 1/sum(idx==i) ) * sum(X(find(idx==i),:));
+endfor
 
 
 
